@@ -1,0 +1,59 @@
+body {
+   background: linear-gradient(to bottom, #3498db, #2980b9); /* Fundo gradiente azul escuro para azul claro */
+    color: #333; /* texto principal */
+    font-family: 'Arial', sans-serif; /* fonte*/
+    margin: 0; /* Remove margens padão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+.logo-container {
+    text-align: center; /* Alinha o texto no centro */
+    margin: 20px 0; /* Margem superior e inferior de 20 pixels */
+}
+
+.logo {
+    max-width: 100%; /* Garante que a logo nÃ£o ultrapasse o contÃªiner */
+    height: auto; /* Altura automÃ¡tica para manter a proporÃ§Ã£o original */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Preenchimento interno do formulÃ¡rio */
+    border-radius: 8px; /* Borda arredondada com raio de 8 pixels */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulÃ¡rio */
+    width: 300px; /* Largura do formulÃ¡rio */
+    margin: 0 auto; /* Centraliza o formulÃ¡rio na pÃ¡gina */
+}
+
+form label {
+    display: block; /* xibe labels em uma nova linha */
+    margin-bottom: 8px; /* Margem inferior entre as labels */
+}
+
+form input {
+    width: 100%; /* Largura total do campo de entrada */
+    padding: 10px; /* Preenchimento interno do campo de entrada */
+    margin-bottom: 15px; /* Margem inferior entre os campos de entrada */
+    box-sizing: border-box; /* O tamanho total do elemento inclui a borda e o preenchimento, nÃ£o apenas o conteÃºdo */
+}
+
+form input[type="submit"] {
+    background-color: #3498db; /* Cor de fundo para o botÃ£o de envio */
+    color: #fff; /* Cor do texto do botÃ£o de envio */
+    cursor: pointer; /* Mostra o cursor como um ponteiro ao passar por cima */
+}
+
+form input[type="submit"]:hover {
+    background-color: #2980b9; /* Cor de fundo mais escura ao passar o mouse por cima do botÃ£o de envio */
+}
+
+button {
+    background-color: #ddd; /* Cor de fundo para o botÃ£o VOLTAR */
+    padding: 10px; /* Preenchimento interno do botÃ£o VOLTAR */
+    border: none; /* Remove a borda padrÃ£o do botÃ£o */
+    cursor: pointer; /* Mostra o cursor como um ponteiro ao passar por cima */
+}
+
+button:hover {
+    background-color: #ccc; /* Cor de fundo mais escura ao passar o mouse por cima do botÃ£o VOLTAR */
+}
