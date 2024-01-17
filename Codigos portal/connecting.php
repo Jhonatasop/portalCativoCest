@@ -14,9 +14,9 @@ require __DIR__ . '/vendor/autoload.php';
 $duracao_autorizacao = 30; // Duração da autorização em minutos
 $id_site = 'default'; // ID do site encontrado na URL 
 
-$usuario_controller = 'marcos26184'; // Nome de usuário para acesso ao UniFi Controller
-$senha_controller = '3Lynn32019@$@'; // Senha para acesso ao UniFi Controller
-$url_controller = 'https://10.0.0.109:8443'; // URL completa para o UniFi Controller, por exemplo, 'https://22.22.11.11:8443'
+$usuario_controller = ''; // Nome de usuário para acesso ao UniFi Controller
+$senha_controller = ''; // Senha para acesso ao UniFi Controller
+$url_controller = 'https://ipserver:8443'; // URL completa para o UniFi Controller, por exemplo, 'https://22.22.11.11:8443'
 $versao_controller = '7.1.68'; // Versão do software do Controller, por exemplo, '4.6.6' (deve ser pelo menos 4.0.0)
 $depuracao = false;
 
