@@ -10,12 +10,12 @@ $ap = $_SESSION["ap"];
 require __DIR__ . '/vendor/autoload.php';
 
 // Configurações para autorização no UniFi Controller
-$duracao_autorizacao = 20; // Duração da autorização em minutos
-$id_site = 'default'; // ID do site encontrado na URL 
+$duracao_autorizacao = 20; // Tempo em minutos que usuario ficara logado
+$id_site = 'default'; // ID do site encontrado na URL exemplo servidor:8443/manage/site/default/
 
-$usuario_controller = 'marcos26184'; // Nome de usuário do UniFi Controller
-$senha_controller = '3Lynn32019@$@'; // Senha para acesso ao UniFi Controller
-$url_controller = 'https://10.0.0.103:8443'; // URL do UniFi Controller
+$usuario_controller = 'usuarioUnifi'; // Nome de usuário do UniFi Controller Cadastrado no site da Unifi
+$senha_controller = 'SenhaUnifi'; // Senha para acesso ao UniFi Controller 
+$url_controller = 'https://servidor:8443'; // URL do UniFi Controller
 $versao_controller = '7.1.68'; // Versão do software do Controller
 $depuracao = false;
 
@@ -28,12 +28,12 @@ $definir_modo_debug = $unifi_conexao->set_debug($depuracao);
 // Faz o login no UniFi Controller
 $resultados_login = $unifi_conexao->login();
 
-// Obtém os dados do formulário se é aluno ou visitante
-$tipoUsuario = $_POST['tipoUsuario'];
+// Obtém os dados do formulário se é aluno ou visitante usuario vai selecionar se é aluno ou visitante a lógica pronta esta apenas para visitante
+$tipoUsuario = $_POST['tipoUsuario'];  
 $cpfMatricula = $_POST['cpfMatricula'];
 $senha = $_POST['senha'];
 
-// Inclui o arquivo de conexão
+// Inclui o arquivo de conexão com o banco
 include 'conexao.php';
 
 // Consulta no banco de dados para verificar o usuário cadastrado (quando for visitante)
