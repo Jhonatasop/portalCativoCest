@@ -1,0 +1,1281 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Documentação</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c23b7b1a-b539-4522-b153-303f57cbdc31" class="page sans"><header><h1 class="page-title">Documentação</h1><p class="page-description"></p></header><div class="page-body"><ul id="d67ffc0f-1d52-4119-a9a8-d8c912920e56" class="toggle"><li><details open=""><summary>index.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="894e30e4-8e9b-4845-aacc-47eca7a9646f" class="code"><code class="language-PHP">&lt;?php
+
+session_start();</code></pre><ul id="9b02791a-43b8-4409-820c-b3dcce3819f7" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Inicia uma sessão PHP para permitir o armazenamento de variáveis de sessão.</li></ul><ul id="2f7c0075-c196-4b8b-b858-67cc95d6cb2d" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="1d648686-d0cc-4ef1-b200-eeee31ce2466" class="bulleted-list"><li style="list-style-type:circle"><code>session_start();</code>: Inicia ou resume uma sessão PHP existente, permitindo o armazenamento de dados de sessão.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0dd5b484-7d17-4666-9e7e-8ef71154c778" class="code"><code class="language-PHP">$_SESSION[&quot;id&quot;] = $_GET[&quot;id&quot;];
+$_SESSION[&quot;ap&quot;] = $_GET[&quot;ap&quot;];
+
+?&gt;</code></pre><ul id="31a22c2d-ca6c-463f-8056-b6d8e3c22485" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Obtém e armazena os endereços MAC do ponto de acesso (AP) e do usuário na sessão.</li></ul><ul id="53d5a9a7-b149-4619-8b31-f0a637b73e0b" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="0816a2a9-2f21-4324-932f-bf7e14be720e" class="bulleted-list"><li style="list-style-type:circle"><code>$_SESSION[&quot;id&quot;] = $_GET[&quot;id&quot;];</code>: Obtém o endereço MAC do usuário a partir dos parâmetros da URL (<code>id</code>) e o armazena na variável de sessão <code>$_SESSION[&quot;id&quot;]</code>.</li></ul><ul id="9a3b8e13-a122-421b-a643-2ed89d125637" class="bulleted-list"><li style="list-style-type:circle"><code>$_SESSION[&quot;ap&quot;] = $_GET[&quot;ap&quot;];</code>: Obtém o endereço MAC do ponto de acesso (AP) a partir dos parâmetros da URL (<code>ap</code>) e o armazena na variável de sessão <code>$_SESSION[&quot;ap&quot;]</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="312edb1a-88dd-4b8a-aecc-569a5567917b" class="code"><code class="language-PHP">&lt;!doctype html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Portal Wi-Fi&lt;/title&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot;&gt;
+    &lt;/head&gt;</code></pre><ul id="25d405b2-ef8c-4ea6-99d8-5ae7a279ef18" class="bulleted-list"><li style="list-style-type:circle"><strong>Configurações Gerais (</strong><code><strong>&lt;head&gt;</strong></code><strong>):</strong><ul id="b066d9a5-1776-402a-b0e4-8805ae6caed8" class="bulleted-list"><li style="list-style-type:square"><strong>Meta Tags e Título:</strong><ul id="a0499065-d7c5-485e-bab1-7b60bcf7e586" class="bulleted-list"><li style="list-style-type:disc"><code>meta charset=&quot;utf-8&quot;</code>: Define a codificação de caracteres UTF-8.</li></ul><ul id="f4d0fd6b-ef40-4526-aa62-bf9664056a9e" class="bulleted-list"><li style="list-style-type:disc"><code>meta name=&quot;viewport&quot; ...</code>: Configura a viewport para melhor suporte a dispositivos móveis.</li></ul><ul id="97614f38-5c76-4658-9b16-e8c2007271be" class="bulleted-list"><li style="list-style-type:disc"><code>title</code>: Define o título da página como &quot;Portal Wi-Fi&quot;.</li></ul></li></ul><ul id="1ff6102b-f724-4678-a14a-3a07a979c21a" class="bulleted-list"><li style="list-style-type:square"><strong>Inclusão de Estilos Externos:</strong><ul id="64ba8227-e930-45d1-96af-be8d58763613" class="bulleted-list"><li style="list-style-type:disc"><code>link rel=&quot;stylesheet&quot;</code>: Inclui o arquivo externo de estilo <code>style.css</code>.</li></ul></li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d2e33b9b-0222-443c-8164-52c71493ef06" class="code"><code class="language-PHP">&lt;body&gt;
+
+        &lt;div class=&quot;logo-container&quot;&gt;
+            &lt;img src=&quot;./cest.png&quot; alt=&quot;Logo da Empresa&quot; class=&quot;logo&quot;&gt;
+        &lt;/div&gt;
+
+
+        &lt;form method=&quot;post&quot; action=&quot;connecting.php&quot;&gt;
+
+            &lt;div class=&quot;radio-group&quot;&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;aluno&quot; name=&quot;tipoUsuario&quot; value=&quot;aluno&quot; required&gt;
+                &lt;label for=&quot;aluno&quot;&gt;Aluno&lt;/label&gt;
+
+                &lt;input type=&quot;radio&quot; id=&quot;visitante&quot; name=&quot;tipoUsuario&quot; value=&quot;visitante&quot; required&gt;
+                &lt;label for=&quot;visitante&quot;&gt;Visitante&lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;div id=&quot;inputContainer&quot;&gt;
+                &lt;!-- Input inicial (será substituído dinamicamente) --&gt;
+                &lt;input type=&quot;text&quot; name=&quot;cpfMatricula&quot; placeholder=&quot;Inserir CPF ou Matrícula&quot; required&gt;
+            &lt;/div&gt;
+            Senha
+            &lt;input type=&quot;password&quot; name=&quot;senha&quot; placeholder=&quot;Inserir Senha&quot; required&gt;
+            &lt;br&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Entrar&quot;&gt;
+
+            &lt;!-- Adicionando link para a página de alteração de senha --&gt;
+            &lt;a href=&quot;cadastro/esqueceu_senha.php&quot;&gt;Redefinir senha&lt;/a&gt;
+
+
+
+        &lt;/form&gt;
+        &lt;br&gt;&lt;br&gt;
+
+
+        &lt;!-- Botão de redirecionamento para a página de cadastro.php --&gt;
+        &lt;button class=&quot;signup-button&quot; onclick=&quot;window.location.href=&#x27;cadastro/cadastro.php&#x27;&quot;&gt;Cadastrar&lt;/button&gt;&lt;br&gt;
+
+        &lt;script&gt;
+    // Adiciona um ouvinte de evento aos radio buttons para alterar o tipo de entrada
+            var radioAluno = document.getElementById(&#x27;aluno&#x27;);
+            var radioVisitante = document.getElementById(&#x27;visitante&#x27;);
+            var inputContainer = document.getElementById(&#x27;inputContainer&#x27;);
+            var radioGroup = document.querySelector(&#x27;.radio-group&#x27;);
+
+            radioAluno.addEventListener(&#x27;change&#x27;, function () {
+                if (radioAluno.checked) {
+                    inputContainer.innerHTML = &#x27;&lt;input type=&quot;text&quot; name=&quot;cpfMatricula&quot; placeholder=&quot;Inserir Matrícula&quot; required&gt;&#x27;;
+                }
+            });
+
+            radioVisitante.addEventListener(&#x27;change&#x27;, function () {
+                if (radioVisitante.checked) {
+                    inputContainer.innerHTML = &#x27;&lt;input type=&quot;text&quot; name=&quot;cpfMatricula&quot; placeholder=&quot;Inserir CPF&quot; required&gt;&#x27;;
+                }
+            });
+        &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre><ul id="509f97ec-f822-43d9-8844-d2e2dbec9d50" class="bulleted-list"><li style="list-style-type:circle"><strong>Corpo da Página (</strong><code><strong>&lt;body&gt;</strong></code><strong>):</strong><ul id="58a3b316-e636-425a-ba6d-eb6faaad0a79" class="bulleted-list"><li style="list-style-type:square"><strong>Logo e Formulário:</strong><ul id="2e857736-2790-4134-b5c9-57b0c8ffb679" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;div class=&quot;logo-container&quot;&gt;</code>: Contêiner para a logo da empresa.</li></ul><ul id="5791c6a9-a15d-44c3-a70e-3e170ff9ce56" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;form method=&quot;post&quot; action=&quot;connecting.php&quot;&gt;</code>: Formulário de autenticação, com método POST e ação para o arquivo <code>connecting.php</code>.</li></ul><ul id="1629dce4-aa01-4153-9f76-dea6fec7d5b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Radio Group:</strong><ul id="c81a6618-61fc-40a5-bd3b-686628df38f0" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;div class=&quot;radio-group&quot;&gt;</code>: Contêiner para os botões de rádio.</li></ul><ul id="9399cfcf-de3d-4113-a5b9-8ef5ce702f53" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;input type=&quot;radio&quot; ...&gt;</code>: Botão de rádio para selecionar o tipo de usuário (Aluno ou Visitante).</li></ul><ul id="af5d8b9f-4c54-4154-bcb3-e5d68714c49d" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;label for=&quot;aluno&quot;&gt;...&lt;/label&gt;</code>: Rótulo associado ao botão de rádio &quot;Aluno&quot;.</li></ul><ul id="51d29b40-3718-4efa-8bcc-fb726b84e7b0" class="bulleted-list"><li style="list-style-type:circle">Similarmente para o botão &quot;Visitante&quot;.</li></ul></li></ul><ul id="ddc2616a-78ef-4ae6-8eea-c09279cfc3e9" class="bulleted-list"><li style="list-style-type:disc"><strong>Input Container Dinâmico:</strong><ul id="72dcda14-707e-43dc-b2c4-3a407bf1038c" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;div id=&quot;inputContainer&quot;&gt;</code>: Contêiner para a entrada de CPF ou Matrícula, substituído dinamicamente com JavaScript.</li></ul><ul id="e1236d12-57f3-4025-9bbd-b239921487b2" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;input type=&quot;text&quot; ...&gt;</code>: Campo de entrada inicial para CPF ou Matrícula.</li></ul></li></ul><ul id="d357cfd5-7d91-4c5f-a097-d38bfef1fd22" class="bulleted-list"><li style="list-style-type:disc"><strong>Campo de Senha:</strong><ul id="56e293a6-1875-4b57-b9a5-9b140216ae5b" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;input type=&quot;password&quot; ...&gt;</code>: Campo de entrada para a senha do usuário.</li></ul></li></ul><ul id="be1645b9-a358-41b5-88c9-628314ac3667" class="bulleted-list"><li style="list-style-type:disc"><strong>Botão de Envio:</strong><ul id="70cebeeb-1cee-4cab-9029-f631e22c81c8" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;input type=&quot;submit&quot; ...&gt;</code>: Botão de envio do formulário.</li></ul></li></ul><ul id="65fbfe9b-6d88-4238-b8e0-2e2b7be963a5" class="bulleted-list"><li style="list-style-type:disc"><strong>Link para Redefinição de Senha:</strong><ul id="41d1c109-a985-4013-b5f3-a6db03414442" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;a href=&quot;cadastro/esqueceu_senha.php&quot;&gt;Redefinir senha&lt;/a&gt;</code>: Link para a página de redefinição de senha.</li></ul></li></ul><ul id="bb14a528-2bb9-4472-821c-26ba9873bb9b" class="bulleted-list"><li style="list-style-type:disc"><strong>Botão de Cadastro:</strong><ul id="9b16e15b-7d4f-4de1-bf79-3052a47ca587" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;button class=&quot;signup-button&quot; ...&gt;</code>: Botão de redirecionamento para a página de cadastro.</li></ul></li></ul><ul id="e26f226f-b996-43d2-be8b-47a0662c92af" class="bulleted-list"><li style="list-style-type:disc"><strong>Script JavaScript:</strong><ul id="773cd027-3e5d-414a-8588-810bcbecb616" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;script&gt; ... &lt;/script&gt;</code>: Script JavaScript para dinamicamente alterar o campo de entrada com base na seleção do tipo de usuário.</li></ul></li></ul></li></ul></li></ul></li></ul></details></li></ul><ul id="f3cd7bab-58d8-4762-aba4-1abd1aa35c25" class="toggle"><li><details open=""><summary>connecting.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7b1a6654-9521-48f3-91f3-4a997f19ea67" class="code"><code class="language-PHP">&lt;?php
+
+// Inicia a sessão
+session_start();</code></pre><ul id="831d6f49-5ee3-4d0e-9348-5d5c84b29351" class="bulleted-list"><li style="list-style-type:disc">Inicia uma sessão PHP. As sessões são usadas para armazenar informações do lado do servidor que podem ser acessadas entre diferentes páginas.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5e8ec249-f477-4e61-9ce4-a8f3435f840e" class="code"><code class="language-PHP">// Obtém os endereços MAC do ponto de acesso (AP) e do usuário da sessão
+$mac = $_SESSION[&quot;id&quot;];
+$ap = $_SESSION[&quot;ap&quot;];</code></pre><ul id="cda014e7-80d7-4c17-beff-058634f340f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Obtenção de Endereços MAC (</strong><code><strong>$mac = $_SESSION[&quot;id&quot;]; $ap = $_SESSION[&quot;ap&quot;];</strong></code><strong>):</strong><ul id="6694bd11-e667-4764-bba8-e1d8203611f3" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Obtém os endereços MAC do ponto de acesso (AP) e do usuário armazenados na sessão.</li></ul><ul id="9acde657-8ecc-4ac0-8662-27c9adbe105a" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Recupera os valores armazenados nas variáveis de sessão <code>$_SESSION[&quot;id&quot;]</code> e <code>$_SESSION[&quot;ap&quot;]</code> para utilizar posteriormente.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5a260dbc-3719-4ffc-ac9c-fe65389cbba8" class="code"><code class="language-PHP">// Carrega a biblioteca UniFi
+require __DIR__ . &#x27;/vendor/autoload.php&#x27;;</code></pre><ul id="cb5b201a-abfb-4a5e-8b06-39207b0c73e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Carregamento da Biblioteca UniFi (</strong><code><strong>require __DIR__ . &#x27;/vendor/autoload.php&#x27;;</strong></code><strong>):</strong><ul id="9b4e7a78-bb59-497b-8395-7c8cfd908285" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Carrega a biblioteca UniFi API.</li></ul><ul id="81c174c6-9e6b-46e8-84e9-d560eba4449f" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Inclui a biblioteca necessária para interagir com o UniFi Controller.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4d10ba94-0f91-4460-b072-798bd77c1839" class="code"><code class="language-PHP">// Configurações para autorização no UniFi Controller
+$duracao_autorizacao = 20; // Tempo em minutos que usuario ficara logado
+$id_site = &#x27;default&#x27;; // ID do site encontrado na URL exemplo servidor:8443/manage/site/default/</code></pre><ul id="02b404d6-8c62-4085-ade2-7becf0aa54da" class="bulleted-list"><li style="list-style-type:disc">Define algumas configurações específicas para a autorização no UniFi Controller, como a duração da autorização em minutos e o ID do site.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9ad01e00-2fd1-4d3a-b304-a32a6b101d07" class="code"><code class="language-PHP">$usuario_controller = &#x27;usuarioUnifi&#x27;; // Nome de usuário do UniFi Controller Cadastrado no site da Unifi
+$senha_controller = &#x27;SenhaUnifi&#x27;; // Senha para acesso ao UniFi Controller 
+$url_controller = &#x27;https://servidor:8443&#x27;; // URL do UniFi Controller
+$versao_controller = &#x27;7.1.68&#x27;; // Versão do software do Controller
+$depuracao = false;</code></pre><ul id="54136b1b-9d08-48d9-993c-dd5852c79bd6" class="bulleted-list"><li style="list-style-type:disc">Configura as informações de autenticação para o UniFi Controller, como nome de usuário, senha, URL e versão do software.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a0bd6fc5-48b7-4307-b4f9-b2abb87622cb" class="code"><code class="language-PHP">// Cria uma instância da classe UniFi API Client
+$unifi_conexao = new UniFi_API\Client($usuario_controller, $senha_controller, $url_controller, $id_site, $versao_controller);</code></pre><ul id="b4b22f4d-4f12-4e6e-8774-6fb0581f058f" class="bulleted-list"><li style="list-style-type:disc">Cria uma instância da classe UniFi API Client usando as informações fornecidas anteriormente.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e73dd301-4807-42bc-902c-5731e69fb2ad" class="code"><code class="language-PHP">// Define o modo de depuração
+$definir_modo_debug = $unifi_conexao-&gt;set_debug($depuracao);</code></pre><ul id="ebdb3d9e-e7ff-4b4c-a820-650247a37853" class="bulleted-list"><li style="list-style-type:disc">Define o modo de depuração da conexão UniFi API Client com base na configuração anterior.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="817af059-2afd-4d89-9d07-c86cc41ed0e6" class="code"><code class="language-PHP">// Faz o login no UniFi Controller
+$resultados_login = $unifi_conexao-&gt;login();</code></pre><ul id="d162bfba-b5db-4a6b-8c36-140068f3cd5a" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Realiza o login no UniFi Controller.</li></ul><ul id="830ed792-0b76-4370-a882-51bc00945e28" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Chama o método <code>login()</code> da instância da classe UniFi API Client, armazenando os resultados em <code>$resultados_login</code>.</li></ul><h2 id="ebacf441-6b25-4ebd-ab6b-f6575f506dbf" class=""><strong>Autenticação do Usuário</strong></h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cf6b17b1-80d6-443b-a41e-444e6df85a68" class="code"><code class="language-PHP">// Obtém os dados do formulário se é aluno ou visitante usuario vai selecionar se é aluno ou visitante a lógica pronta esta apenas para visitante
+$tipoUsuario = $_POST[&#x27;tipoUsuario&#x27;];  
+$cpfMatricula = $_POST[&#x27;cpfMatricula&#x27;];
+$senha = $_POST[&#x27;senha&#x27;];</code></pre><ul id="47589e2b-499d-449d-97ca-99ade737f966" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Obtém os dados do formulário HTML via método POST.</li></ul><ul id="fb94c7ec-fa2a-4ed8-b796-035775affa6f" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza <code>$_POST</code> para coletar informações do tipo de usuário, CPF/Matrícula e senha fornecidos pelo formulário.</li></ul><ol type="1" id="1bcf5193-426c-464e-ab56-dd367bf25f4e" class="numbered-list" start="1"><li><strong>Conectar ao Banco de Dados</strong></li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="28a4fc5e-fdb9-49eb-820e-819e7f376f75" class="code"><code class="language-PHP">include &#x27;conexao.php&#x27;;</code></pre><ul id="7d12147f-be00-4544-abd0-84e0fc1af5ec" class="bulleted-list"><li style="list-style-type:disc">Inclui um arquivo chamado <code>conexao.php</code>, que contém informações ou funções relacionadas à conexão com o banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4c6f0b7c-2237-4ca7-9dd2-dad7027d1306" class="code"><code class="language-PHP">$sql = &quot;SELECT * FROM usuarios WHERE &quot;;
+
+if ($tipoUsuario == &#x27;aluno&#x27;) {
+    $sql .= &quot;matricula = &#x27;$cpfMatricula&#x27;&quot;;
+} elseif ($tipoUsuario == &#x27;visitante&#x27;) {
+    $sql .= &quot;cpf = &#x27;$cpfMatricula&#x27;&quot;;
+} else {
+    // Tipo de usuário não reconhecido
+    echo &quot;Tipo de usuário não reconhecido.&quot;;
+    exit;
+}
+
+$result = $conn-&gt;query($sql);</code></pre><ul id="e262e37e-3cf1-4950-b812-f53daf9f65b1" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Executa uma consulta SQL para verificar o usuário no banco de dados.</li></ul><ul id="c11ef981-452e-4b40-baf1-0217e25f5390" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Constrói dinamicamente uma consulta SQL com base no tipo de usuário. O resultado é armazenado em <code>$result</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="868c7c48-b2d7-4e95-aaf8-cbb59d28e2dc" class="code"><code class="language-PHP">// Verifica se o usuário foi encontrado no banco de dados
+if ($result-&gt;num_rows &gt; 0) {
+    $row = $result-&gt;fetch_assoc();
+
+    // Verifica a senha hasheada
+    if (password_verify($senha, $row[&#x27;senha&#x27;])) {
+        // Usuário autenticado com sucesso
+
+        // Autoriza o acesso do usuário na rede Wi-Fi
+        $resultado_autorizacao = $unifi_conexao-&gt;authorize_guest($mac, $duracao_autorizacao, $up = null, $down = null, $MBytes = null, $ap);
+
+        // Registra os dados na tabela &quot;usuarios_log&quot;
+        $nome = $row[&#x27;nome&#x27;];
+        $cpf = $row[&#x27;cpf&#x27;];
+        $telefone = $row[&#x27;telefone&#x27;];
+        $ip = $_SERVER[&#x27;REMOTE_ADDR&#x27;]; // Obtém o IP do cliente
+        $hora_login = date(&#x27;Y-m-d H:i:s&#x27;);
+
+        // Insere os dados na tabela &quot;usuarios_log&quot;
+        $sql_insert_log = &quot;INSERT INTO usuarios_log (nome, cpf, telefone, ip, mac, hora_login, hora_logout) VALUES (&#x27;$nome&#x27;, &#x27;$cpf&#x27;, &#x27;$telefone&#x27;, &#x27;$ip&#x27;, &#x27;$mac&#x27;, &#x27;$hora_login&#x27;, NULL)&quot;;
+        $conn-&gt;query($sql_insert_log);
+
+        // Redireciona para a página desejada
+        header(&#x27;Location: https://www.google.com.br&#x27;);
+        exit(); // Certifica-se de que o script não continua a ser executado após o redirecionamento
+    } else {
+        // Senha incorreta
+        $mensagem = &quot;Senha incorreta. Por favor, tente novamente.&quot;;
+        echo &quot;&lt;script&gt;
+            alert(&#x27;$mensagem&#x27;);
+            window.location.href = &#x27;index.php&#x27;; // redireciona para a página desejada
+            &lt;/script&gt;&quot;;
+    }
+} else {
+    // Usuário não encontrado
+    $mensagem = &quot;Usuário não encontrado. Por favor, verifique o CPF ou a Matrícula e a senha.&quot;;</code></pre><ul id="d03343c9-15a7-49fe-8d5a-05545daea726" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Autentica o usuário, autoriza o acesso Wi-Fi, e registra dados no banco de dados.</li></ul><ul id="1d40a1c9-c99d-4276-ac1b-d05a82baacd6" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Verifica se o usuário foi encontrado no banco de dados e realiza as ações correspondentes, como autorização no UniFi Controller e registro de dados na tabela <code>usuarios_log</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ffaca0b6-53b7-4658-95d6-b5f13e75638d" class="code"><code class="language-PHP">echo &quot;&lt;script&gt;
+        alert(&#x27;$mensagem&#x27;);
+        window.location.href = &#x27;index.php&#x27;; // redireciona para a página desejada
+        &lt;/script&gt;&quot;;
+}</code></pre><ul id="00809aab-1231-4df9-8a28-08b7dbd69610" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Lida com possíveis erros, como tipo de usuário não reconhecido ou senhas incorretas.</li></ul><ul id="e23461c7-f9ba-47bd-9a8f-5c868a4a56a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Exibe mensagens de erro e, em alguns casos, redireciona o usuário para a página inicial.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="81ae8e6e-6cfa-4626-8960-8c3c00006cda" class="code"><code class="language-PHP">// Fecha a conexão com o banco de dados
+$conn-&gt;close();
+?&gt;</code></pre><ul id="201e6340-05eb-4e84-abcc-1fa7ee6c6462" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Fecha a conexão com o banco de dados após a execução das operações.</li></ul><ul id="2a2c412a-9750-4290-a2aa-e194907e7b0e" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza <code>$conn-&gt;close()</code> para liberar os recursos e encerrar a conexão com o banco de dados.</li></ul></details></li></ul><ul id="e83641c4-cc3c-4302-bb9f-622165ac9f57" class="toggle"><li><details open=""><summary>atualizarsenha.php</summary><h3 id="8ce61c84-13ca-4f50-95db-9297d3a2fdd0" class="">Conexão com o banco de dados</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e097dc59-aca8-426f-8151-ad7716cb664c" class="code"><code class="language-PHP">&lt;?php
+// Conectar ao banco de dados
+include &#x27;../conexao.php&#x27;;</code></pre><ul id="4ada4a39-9e30-4b2e-8467-097202061d60" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estabelecer a conexão com o banco de dados.<ul id="b9e479c5-0f49-419c-b8de-b24e087de5b0" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Inclui o arquivo &quot;conexao.php&quot;, que contém as configurações de conexão com o banco de dados.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2a4c73a1-252a-4d49-a53c-0abdbcbb936f" class="code"><code class="language-PHP">if ($_SERVER[&#x27;REQUEST_METHOD&#x27;] == &#x27;POST&#x27;) {
+    $cpf = $_POST[&#x27;cpf&#x27;];
+    $novaSenha = password_hash($_POST[&#x27;novaSenha&#x27;], PASSWORD_DEFAULT);</code></pre></li></ul><ul id="b0f2b430-d762-4f47-94d2-83bd90abc683" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Identificar se o formulário foi submetido.</li></ul><ul id="4505fd05-75ee-4fc2-a4c0-11aa996743fa" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Verifica se a requisição foi feita usando o método POST para determinar se o formulário foi enviado.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7d0253c6-7dac-411f-8589-c5a674f3424e" class="code"><code class="language-PHP">$cpf = $_POST[&#x27;cpf&#x27;];
+    $novaSenha = password_hash($_POST[&#x27;novaSenha&#x27;], PASSWORD_DEFAULT);
+
+    // Atualizar a senha no banco de dados
+    $sql = &quot;UPDATE usuarios SET senha = &#x27;$novaSenha&#x27; WHERE cpf = &#x27;$cpf&#x27;&quot;;
+    if ($conn-&gt;query($sql) === TRUE) {
+        // Senha atualizada com sucesso, redirecionar para a página de login
+        header(&quot;Location: ../index.php&quot;);
+        exit();
+    } else {
+        // Erro ao atualizar senha, exibir mensagem de erro
+        $error_message = &quot;Erro ao atualizar a senha: &quot; . $conn-&gt;error;
+    }
+}</code></pre><ul id="2341c7fb-f99f-44d2-9fe8-6f236df83f99" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Processar os dados do formulário e atualizar a senha no banco de dados.</li></ul><ul id="7f4d36f9-d347-486d-aa41-c91c0a9fc7ed" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Obtém o CPF e a nova senha do formulário, realiza o hash da nova senha e executa uma instrução SQL para atualizar a senha no banco de dados. Em caso de sucesso, redireciona para a página de login. Em caso de erro, armazena uma mensagem de erro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6163892c-8319-4a17-90a5-bfd4a5585980" class="code"><code class="language-PHP">// Obter CPF da URL
+$cpf = $_GET[&#x27;cpf&#x27;];</code></pre><ul id="7b109152-b676-4443-b2e3-f7977739fca5" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Obter o CPF da URL para preencher automaticamente o campo no formulário.</li></ul><ul id="0f92278c-17d4-478f-b988-d7946fce1559" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Obtém o CPF da URL usando o método GET para pré-preencher o campo correspondente no formulário.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4282d6b9-a693-4bc0-b1a4-c09a8d46cd32" class="code"><code class="language-PHP">// Fechar a conexão
+$conn-&gt;close();
+?&gt;</code></pre><ul id="e8efd4e2-973b-4965-9c83-2bb1489c2619" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Encerrar a conexão com o banco de dados.</li></ul><ul id="b825a624-1c05-4059-bbe5-cee31713b5d2" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Utiliza o método <code>close()</code> para liberar os recursos associados à conexão com o banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3a22c530-2b6b-4585-a3e5-9f4d1410fdc2" class="code"><code class="language-PHP">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Atualizar Senha&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;logo-container&quot;&gt;
+    &lt;img src=&quot;../cest.png&quot; alt=&quot;Logo do cest&quot; class=&quot;logo&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-container&quot;&gt;
+  
+    &lt;?php if (isset($error_message)) echo &quot;&lt;p class=&#x27;error&#x27;&gt;$error_message&lt;/p&gt;&quot;; ?&gt;
+    &lt;form method=&quot;post&quot; action=&quot;&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;cpf&quot; value=&quot;&lt;?php echo $cpf; ?&gt;&quot;&gt;
+        &lt;label for=&quot;novaSenha&quot;&gt;Nova Senha:&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;novaSenha&quot; required&gt;
+        &lt;label for=&quot;confirmarSenha&quot;&gt;Confirmar Senha:&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;confirmarSenha&quot; required&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Atualizar&quot;&gt;
+    &lt;/form&gt;
+    
+     &lt;a href=&quot;../esqueceu_senha.php&quot;&gt;&lt;button&gt;Voltar&lt;/button&gt;&lt;/a&gt;
+  
+
+    
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><ul id="6785cd0f-2082-4eba-b8a8-0477a2af8563" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Estruturação da página HTML para exibir o formulário de atualização de senha.</li></ul><ul id="c32bb3f6-4f21-4ab4-b9a6-fa5a97d17e78" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong> Criação da estrutura HTML com formulário para a atualização da senha. Exibe mensagens de erro, se houver, e pré-preenche o campo do CPF com o valor obtido da URL.</li></ul></li></ul></details></li></ul><ul id="74c78746-5f0c-41c5-955e-8f977804b5ff" class="toggle"><li><details open=""><summary>esqueceu_senha.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cb407c57-d308-4345-b230-81a793ba34e4" class="code"><code class="language-PHP">&lt;?php
+// Conectar ao banco de dados
+include &#x27;../conexao.php&#x27;;</code></pre><ul id="96a4b29e-c83f-44f0-a09a-037a004421d6" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estabelecer a conexão com o banco de dados.</li></ul><ul id="2030db54-53c9-40fe-af1b-8998842ad3a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Inclui o arquivo &quot;conexao.php&quot;, que contém as configurações de conexão com o banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8321021c-4c80-4288-8a2c-a39921809369" class="code"><code class="language-PHP">if ($_SERVER[&#x27;REQUEST_METHOD&#x27;] == &#x27;POST&#x27;) {
+    $cpf = $_POST[&#x27;cpf&#x27;];
+    $telefone = $_POST[&#x27;telefone&#x27;];</code></pre><ul id="45ed14a2-cce5-44d8-8e3f-50342e8cf694" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Identificar se o formulário foi submetido.</li></ul><ul id="3cb4736c-1774-4f69-943e-cffd1493a491" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Verifica se a requisição foi feita usando o método POST para determinar se o formulário foi enviado.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7d793a47-86eb-4cfa-9cea-cbbaa14e5a5f" class="code"><code class="language-PHP">$cpf = $_POST[&#x27;cpf&#x27;];
+    $telefone = $_POST[&#x27;telefone&#x27;];
+
+    // Verificar se o CPF e o telefone existem no banco de dados
+    $sql = &quot;SELECT * FROM usuarios WHERE cpf = &#x27;$cpf&#x27; AND telefone = &#x27;$telefone&#x27;&quot;;
+    $result = $conn-&gt;query($sql);
+
+    if ($result-&gt;num_rows &gt; 0) {
+        // CPF e telefone correspondem, redirecionar para a página de atualização de senha
+        header(&quot;Location: atualizarsenha.php?cpf=$cpf&quot;);
+        exit();
+    } else {
+        // CPF ou telefone incorretos, exibir mensagem de erro
+        $error_message = &quot;CPF e/ou telefone incorretos. Por favor, tente novamente.&quot;;
+    }
+}</code></pre><ul id="1ff74de1-2dd4-4b91-8d83-83be0858f1cf" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Validar se o CPF e o telefone fornecidos existem no banco de dados.</li></ul><ul id="e65a1f23-9a8e-4a9b-849f-6fa31aab80d4" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Realiza uma consulta SQL para verificar se há uma correspondência entre o CPF e o telefone na tabela &quot;usuarios&quot;. Se houver, redireciona para a página &quot;atualizarsenha.php&quot; com o CPF como parâmetro. Caso contrário, exibe uma mensagem de erro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9cb98e9f-70e9-45c2-a7dd-5598298c9c96" class="code"><code class="language-PHP">// Fechar a conexão
+$conn-&gt;close();
+?&gt;</code></pre><ul id="020ffbff-9277-406f-b1db-d58cfa2a3ec4" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Encerrar a conexão com o banco de dados.</li></ul><ul id="c531c095-3da3-4ffd-b123-9f28c0fdaba1" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza o método <code>close()</code> para liberar os recursos associados à conexão com o banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="02274e36-78d0-4a58-8a7e-ed299313ae4e" class="code"><code class="language-PHP">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Esqueceu a Senha&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;form-container&quot;&gt;
+
+    &lt;div class=&quot;logo-container&quot;&gt;
+    &lt;img src=&quot;../cest.png&quot; alt=&quot;Logo do cest&quot; class=&quot;logo&quot;&gt;
+&lt;/div&gt;
+   
+    &lt;?php if (isset($error_message)) echo &quot;&lt;p class=&#x27;error&#x27;&gt;$error_message&lt;/p&gt;&quot;; ?&gt;
+    &lt;form method=&quot;post&quot; action=&quot;&quot;&gt;
+        &lt;label for=&quot;cpf&quot;&gt;CPF:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;cpf&quot; required&gt;
+        &lt;label for=&quot;telefone&quot;&gt;Telefone:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;telefone&quot; required&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Próximo&quot;&gt;
+        &lt;!-- Adicionando botão de voltar --&gt;    
+    &lt;/form&gt;
+    &lt;a href=&quot;../index.php&quot;&gt;&lt;button&gt;Voltar&lt;/button&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><ul id="497272d3-d754-4638-9fad-3a8a0d4c8e16" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estruturação da página HTML para exibir o formulário de recuperação de senha.</li></ul><ul id="117d033c-417b-48cd-a4cb-7bcf98374ee1" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Criação da estrutura HTML com formulário para a recuperação de senha. Exibe mensagens de erro, se houver, e inclui um botão para voltar à página inicial.</li></ul><h3 id="a1060192-cffd-44f8-a700-a73078813058" class="">Conclusão:</h3><p id="82f1367b-562c-42ba-84d5-f94da8448c00" class="">Este script PHP e HTML permite a recuperação de senha dos usuários. Ele interage com o banco de dados, processa formulários e fornece uma interface de usuário para iniciar o processo de recuperação de senha.</p></details></li></ul><ul id="934cc9a2-c842-43cb-8626-2526d0723b50" class="toggle"><li><details open=""><summary>conexao.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b55d7eda-ba7e-4946-8a8b-0d91c4600a22" class="code"><code class="language-PHP">&lt;?php
+
+$servername = &quot;localhost&quot;;
+$username = &quot;usuariobanco&quot;;
+$password = &quot;senhabanco&quot;;
+$dbname = &quot;nomebanco&quot;;</code></pre><ul id="af36634f-ac4c-4317-89bf-3fbb95018daa" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Define as credenciais necessárias para a conexão com o banco de dados.</li></ul><ul id="6ec9b988-867c-417f-a768-8d4bd159ebcd" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Atribui os valores para <code>$servername</code> (endereço do servidor de banco de dados), <code>$username</code> (nome de usuário do banco), <code>$password</code> (senha do banco) e <code>$dbname</code> (nome do banco de dados).</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bd9675f9-5fbc-47f2-9ff7-316afed5d06a" class="code"><code class="language-PHP">// Cria a conexão
+$conn = new mysqli($servername, $username, $password, $dbname);</code></pre><ul id="639080eb-873e-4862-8bba-98362c5afc75" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estabelece a conexão com o banco de dados usando a classe <code>mysqli</code>.</li></ul><ul id="c0a4fd1a-1591-493e-b560-bfe94eae2f98" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza o construtor da classe <code>mysqli</code> para criar uma nova instância de conexão com o banco de dados, armazenada na variável <code>$conn</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="40dc93d0-93a1-41ec-8ec4-5cdf93676a3c" class="code"><code class="language-PHP">// Verifica a conexão
+if ($conn-&gt;connect_error) {
+    die(&quot;Conexão falhou: &quot; . $conn-&gt;connect_error);
+}</code></pre><ul id="70735a9d-c9bb-4841-b033-3388214f85ac" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Verifica se a conexão com o banco de dados foi estabelecida com sucesso.</li></ul><ul id="7d1d9122-4c98-48da-9ada-24640d47bcfd" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza a propriedade <code>connect_error</code> da instância <code>$conn</code> para checar se houve algum erro na conexão. Caso positivo, encerra o script PHP e exibe uma mensagem de erro.</li></ul><h3 id="c749cb50-c169-4796-9c0e-64972b598c6e" class=""><strong>Função para Hashear Senha:</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4dea3760-e06b-42e1-992d-d8d0d6f4319b" class="code"><code class="language-PHP">// Função para hashear a senha (use a que corresponde ao seu método de hash no banco de dados)
+function hashSenha($senha) {
+    return password_hash($senha, PASSWORD_BCRYPT);
+}</code></pre><ul id="a788e740-b6e4-486b-a80a-36b3ee309cf3" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Gera um hash seguro para a senha utilizando o algoritmo bcrypt.</li></ul><ul id="7c217623-9961-4fe5-951a-d269523969e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> A função <code>password_hash()</code> é utilizada para gerar um hash seguro da senha fornecida como argumento. O método de hash utilizado é <code>PASSWORD_BCRYPT</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="91e139cc-0383-4ac2-a92c-c6076a6c5c47" class="code"><code class="language-PHP">// Função para verificar a senha
+function verificarSenha($senha, $hash) {
+    return password_verify($senha, $hash);
+}
+
+?&gt;</code></pre><ul id="cc6fbcbf-2dd1-46d4-9f34-3002e14babd3" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Verifica se a senha corresponde ao hash fornecido.</li></ul><ul id="049ac6ee-32f2-42e2-a03f-560aadb8a37d" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza a função <code>password_verify()</code> para comparar a senha com o hash armazenado. Retorna <code>true</code> se a senha for válida, <code>false</code> caso contrário.</li></ul></details></li></ul><ul id="62c9fba8-9bed-47ab-8fbe-77172a1f910f" class="toggle"><li><details open=""><summary>cadastro.php</summary><h3 id="93a49b65-96ce-49ad-8fe2-7b0c18c0cd23" class="">Página de Cadastro. </h3><p id="34bd3876-ccb9-4e42-8d1d-ce28dddc7581" class="">A página é projetada para coletar informações do usuário, como nome, CPF, telefone, e-mail e senha, e possui validações em tempo real, como a validação do CPF.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7386f53b-d8b9-4748-a96a-35b6a78ce7cf" class="code"><code class="language-PHP">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/cad.style.css&quot;&gt;
+    &lt;title&gt;Cadastro de Visitante&lt;/title&gt;
+&lt;/head&gt;</code></pre><ul id="22f56db5-b98f-4b22-b34a-006ba75643fe" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Declaração e configuração do documento HTML.</li></ul><ul id="25b31d18-a045-4ef3-ad2b-7524d5212126" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Define a versão do HTML, o idioma da página, a codificação de caracteres, e inclui uma folha de estilo CSS externa.</li></ul><p id="8a2bbc65-0b23-4c83-b6b9-fbf34c809d56" class=""><strong>Cabeçalho e Logo:</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2645d86a-2e6e-4e99-ac20-85fc180d69c4" class="code"><code class="language-PHP">&lt;div class=&quot;logo-container&quot;&gt;
+    &lt;img src=&quot;../cest.png&quot; alt=&quot;Logo do cest&quot; class=&quot;logo&quot;&gt;
+&lt;/div&gt;</code></pre><ul id="4a0dc26a-0415-4e63-a9e9-be2aa58d5f60" class="bulleted-list"><li style="list-style-type:disc">Cria um contêiner para a logo, exibindo uma imagem com o caminho &quot;../cest.png&quot; e um texto alternativo (&quot;Logo do cest&quot;).</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e62fdef1-7190-40ad-b1f1-0fad9e0326af" class="code"><code class="language-PHP">&lt;form action=&quot;processa_cadastro.php&quot; method=&quot;post&quot; onsubmit=&quot;return validarCPF()&quot;&gt;
+    &lt;label for=&quot;nome&quot;&gt;NOME COMPLETO&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nome&quot; maxlength=&quot;50&quot; required&gt;
+
+    &lt;label for=&quot;cpf&quot;&gt;CPF:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;cpf&quot; id=&quot;cpf&quot; maxlength=&quot;11&quot; oninput=&quot;validarNumero(this)&quot; required&gt;
+
+    &lt;label for=&quot;telefone&quot;&gt;TEL/WHATS APP&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;telefone&quot; maxlength=&quot;11&quot; required&gt;
+
+    &lt;label for=&quot;email&quot;&gt;EMAIL&lt;/label&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;
+
+    &lt;label for=&quot;senha&quot;&gt;SENHA&lt;/label&gt;
+    &lt;input type=&quot;password&quot; name=&quot;senha&quot; required&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;CADASTRAR&quot;&gt;
+
+    &lt;button onclick=&quot;window.location.href=&#x27;../index.php&#x27;&quot;&gt;VOLTAR&lt;/button&gt;
+&lt;/form&gt;</code></pre><ul id="55ddd995-1e15-4de4-b919-c98a9bd1b629" class="bulleted-list"><li style="list-style-type:disc">Contém campos para inserção de nome, CPF, telefone, e-mail e senha, além de botões para enviar o formulário e voltar à página inicial. Formulário que envia os dados para o script &quot;processa_cadastro.php&quot; usando o método POST. A função <code>validarCPF()</code> é chamada no evento de envio do formulário.</li></ul><p id="e6ead8aa-cb87-4403-8908-c1699c707bcb" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0deacdbc-5820-41c4-bfb4-dcdac2246263" class="code"><code class="language-PHP">&lt;script&gt;
+    function validarCPF() {
+        // Recupera o valor do CPF
+        var cpf = document.getElementById(&#x27;cpf&#x27;).value;
+
+        // Remove caracteres não numéricos
+        cpf = cpf.replace(/\D/g, &#x27;&#x27;);
+
+        // Verifica se o CPF tem 11 dígitos
+        if (cpf.length !== 11) {
+            alert(&#x27;CPF inválido. Certifique-se de inserir 11 dígitos.&#x27;);
+            return false;
+        }
+
+        // Validação do CPF
+        var soma = 0;
+        for (var i = 0; i &lt; 9; i++) {
+            soma += parseInt(cpf.charAt(i)) * (10 - i);
+        }
+        var resto = 11 - (soma % 11);
+        var digitoVerificador1 = (resto &gt;= 10) ? 0 : resto;
+
+        soma = 0;
+        for (var i = 0; i &lt; 10; i++) {
+            soma += parseInt(cpf.charAt(i)) * (11 - i);
+        }
+        resto = 11 - (soma % 11);
+        var digitoVerificador2 = (resto &gt;= 10) ? 0 : resto;
+
+        if (digitoVerificador1 !== parseInt(cpf.charAt(9)) || digitoVerificador2 !== parseInt(cpf.charAt(10))) {
+            alert(&#x27;CPF inválido. Verifique os dígitos verificadores.&#x27;);
+            document.getElementById(&#x27;cpf&#x27;).value = &#x27;&#x27;;  // Limpa o campo CPF
+            return false;
+        }
+
+        // Se passou nas validações, retorna true para permitir o envio do formulário
+        return true;
+    }
+
+        function validarNumero(input) {
+        // Remove caracteres não numéricos do campo
+        input.value = input.value.replace(/\D/g, &#x27;&#x27;);
+    }
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><ul id="b873d240-bdcc-41fb-ae32-d9b04a3c9a60" class="bulleted-list"><li style="list-style-type:disc">Inclusão de scripts JavaScript que fornecem funcionalidades de validação de CPF e remoção de caracteres não numéricos do campo CPF.</li></ul><ul id="b47d0f8e-ce5e-4de9-be24-c50dc09b0e84" class="bulleted-list"><li style="list-style-type:disc">A função <code>validarCPF()</code> realiza a validação do CPF, exibindo alertas em caso de erro e retornando true ou false, dependendo do resultado.</li></ul><ul id="794e2b7f-35a9-4945-b40c-5e2bcb5d3a0b" class="bulleted-list"><li style="list-style-type:disc">A função <code>validarNumero(input)</code> remove caracteres não numéricos do campo associado, garantindo que apenas números sejam aceitos.</li></ul><h3 id="f4c2c869-ff44-4946-898c-68e13338767f" class="">Conclusão:</h3><p id="4b02edd5-db38-4bd4-b7c8-555275e5ab9a" class="">Esta página HTML fornece um formulário de cadastro com validação de CPF utilizando JavaScript, e a estilização é feita através de uma folha de estilo externa.</p></details></li></ul><ul id="bca79175-184b-4cfd-9099-b8c537dbb385" class="toggle"><li><details open=""><summary>processa_cadastro.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="63567cb9-5c20-4efa-bae3-66065aa7542e" class="code"><code class="language-PHP">&lt;?php
+// Conectar ao banco de dados
+include &#x27;../conexao.php&#x27;;</code></pre><ul id="97dc1641-4560-4565-ac2d-7578b193c33f" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estabelecer a conexão com o banco de dados.</li></ul><ul id="8b6cdefd-3412-455e-b6ed-a188680efa15" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Inclui o arquivo &quot;conexao.php&quot;, que contém as configurações de conexão com o banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ccbcda25-ee12-4df4-bde3-f99be7486fa7" class="code"><code class="language-PHP">// Receber os dados do formulário
+$nome = $_POST[&#x27;nome&#x27;];
+$cpf = $_POST[&#x27;cpf&#x27;];
+$telefone = $_POST[&#x27;telefone&#x27;];
+$email = $_POST[&#x27;email&#x27;];
+$senha = password_hash($_POST[&#x27;senha&#x27;], PASSWORD_DEFAULT);</code></pre><ul id="a7ee7ca5-dac8-425e-b854-0cb0d84c9849" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Obter os dados submetidos pelo formulário de cadastro.</li></ul><ul id="fe910761-6ca7-43dc-93f5-f3860fd888d3" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza o método POST para obter os valores dos campos do formulário e hash da senha para armazenamento seguro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cece62c9-0950-484d-911c-ab46d4aa981a" class="code"><code class="language-PHP">// Obter data e hora atuais
+$dataHoraCadastro = date(&quot;Y-m-d H:i:s&quot;);</code></pre><ul id="31547de2-d27c-40ca-b634-07d45a96581f" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Registrar a data e hora exatas do momento do cadastro.</li></ul><ul id="064e267c-1497-4564-86c8-88b3a788bf7e" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza a função <code>date()</code> para obter a data e hora atuais no formato apropriado para armazenamento no banco de dados.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="70555aec-9a0c-4339-afbf-f7f3d58af465" class="code"><code class="language-PHP">// Obter endereço IP do cliente
+$ip = $_SERVER[&#x27;REMOTE_ADDR&#x27;];</code></pre><ul id="332e097d-9b4b-4aef-8dc8-698974655f50" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Registrar o endereço IP do usuário que está realizando o cadastro.</li></ul><ul id="336b0175-4971-4137-af61-285b8c751b7f" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza a variável <code>$_SERVER[&#x27;REMOTE_ADDR&#x27;]</code> para obter o endereço IP do cliente.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0457cfec-996e-4e61-bf15-b98086317415" class="code"><code class="language-PHP">// Função para obter o endereço MAC
+function getMACAddress(){
+    exec(&quot;ipconfig /all&quot;, $output);
+    foreach($output as $line){
+        if (preg_match(&#x27;/Physical.*: (.*)/&#x27;, $line, $mac)){
+            return $mac[1];
+        }
+    }
+    return null;
+}
+
+// Obter endereço MAC
+$mac = getMACAddress();</code></pre><ul id="97a1b33b-55bd-498e-a28b-441315c1c2e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Recuperar o endereço MAC da máquina do cliente.</li></ul><ul id="8a118a2e-57bf-4b9a-b445-5d240b57aea1" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza a função <code>getMACAddress()</code> para executar comandos do sistema e recuperar o endereço MAC.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6e892582-1379-486b-a750-d47627b0dd02" class="code"><code class="language-PHP">// Verificar se o CPF já foi cadastrado
+$sql_cpf = &quot;SELECT * FROM usuarios WHERE cpf = &#x27;$cpf&#x27;&quot;;
+$result_cpf = $conn-&gt;query($sql_cpf);
+
+if ($result_cpf-&gt;num_rows &gt; 0) {
+    // CPF já cadastrado, exibir mensagem de alerta
+    echo &#x27;&lt;script&gt;alert(&quot;CPF já cadastrado. Por favor, escolha outro.&quot;);&lt;/script&gt;&#x27;;
+    echo &#x27;&lt;script&gt;window.location.href=&quot;cadastro.php&quot;;&lt;/script&gt;&#x27;;
+    $conn-&gt;close();
+    exit();
+}
+
+// Verificar se o e-mail já foi cadastrado
+$sql_email = &quot;SELECT * FROM usuarios WHERE email = &#x27;$email&#x27;&quot;;
+$result_email = $conn-&gt;query($sql_email);
+
+if ($result_email-&gt;num_rows &gt; 0) {
+    // E-mail já cadastrado, exibir mensagem de alerta
+    echo &#x27;&lt;script&gt;alert(&quot;E-mail já cadastrado. Por favor, escolha outro.&quot;);&lt;/script&gt;&#x27;;
+    echo &#x27;&lt;script&gt;window.location.href=&quot;cadastro.php&quot;;&lt;/script&gt;&#x27;;
+    $conn-&gt;close();
+    exit();
+}</code></pre><ul id="58647188-d2c7-4071-b691-c0047ecc5d1f" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Garantir a unicidade de CPF e e-mail no banco de dados.</li></ul><ul id="8540b50e-ce26-4207-8816-584118a266dc" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Realiza consultas SQL para verificar se o CPF ou e-mail já existem na tabela de usuários. Exibe mensagens de alerta e redireciona em caso de duplicidade.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="419a83cc-6b4c-4f52-823a-3e3d9af68bb7" class="code"><code class="language-PHP">// Inserir os dados no banco de dados
+$sql = &quot;INSERT INTO usuarios (nome, cpf, telefone, email, senha, data_hora_cadastro, ip, mac) 
+        VALUES (&#x27;$nome&#x27;, &#x27;$cpf&#x27;, &#x27;$telefone&#x27;, &#x27;$email&#x27;, &#x27;$senha&#x27;, &#x27;$dataHoraCadastro&#x27;, &#x27;$ip&#x27;, &#x27;$mac&#x27;)&quot;;</code></pre><ul id="5a285994-995a-4c1e-b038-88b6592d3b73" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Armazenar os dados do novo usuário no banco de dados.</li></ul><ul id="661759c3-3728-4b55-bf0d-c5a5bd6e8612" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Executa uma instrução SQL para inserir os dados do usuário na tabela &quot;usuarios&quot;.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="596f4cfb-da31-4503-b3f1-12106fb76dd0" class="code"><code class="language-PHP">if ($conn-&gt;query($sql) === TRUE) {
+    // Cadastro bem-sucedido, exibir mensagem de alerta e redirecionar
+    echo &#x27;&lt;script&gt;alert(&quot;Cadastro bem-sucedido!&quot;);&lt;/script&gt;&#x27;;
+    echo &#x27;&lt;script&gt;window.location.href=&quot;index.php&quot;;&lt;/script&gt;&#x27;;
+    $conn-&gt;close();
+    exit(); // Certifique-se de parar a execução do script após o redirecionamento
+} else {
+    // Erro ao cadastrar, exibir mensagem de alerta com detalhes do erro
+    echo &#x27;&lt;script&gt;alert(&quot;Erro ao cadastrar: &#x27; . $conn-&gt;error . &#x27;&quot;);&lt;/script&gt;&#x27;;
+}</code></pre><ul id="71887387-0f2e-4741-8b72-93db14bcfa44" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Tratar o resultado da inserção no banco de dados.</li></ul><ul id="fb16943e-983a-4913-a8f6-e94ce205b669" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Se a inserção for bem-sucedida, exibe uma mensagem de sucesso, redireciona para a página inicial e encerra a execução. Em caso de erro, exibe uma mensagem de alerta com detalhes do erro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="25be8320-80f8-4216-9c87-152f8fb8853d" class="code"><code class="language-PHP">// Fechar a conexão
+$conn-&gt;close();
+?&gt;</code></pre><ul id="b429e47e-91e0-4743-8fb1-dd63305d96a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Encerrar a conexão com o banco de dados.</li></ul><ul id="da98c03c-8fd9-482b-b54c-bdd49d2361f7" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong> Utiliza o método <code>close()</code> para liberar os recursos associados à conexão com o banco de dados.</li></ul><h3 id="677fb71a-808d-4a1f-9c50-a363a9c23e67" class="">Conclusão</h3><p id="53f1e0ac-75a0-49c2-acff-351a208548dc" class="">Este script PHP trata do processamento do formulário de cadastro, realizando a validação de dados, verificação de duplicatas (CPF e e-mail) no banco de dados e inserção segura dos dados do novo usuário. As mensagens de alerta são utilizadas para fornecer feedback ao usuário.</p></details></li></ul><ul id="7240de94-5058-4128-9be6-ecef5dcaa3c7" class="toggle"><li><details open=""><summary>cad.style.css</summary><h3 id="d111428f-d7bf-4a1b-93ee-c574b74e6e48" class="">Estilo Geral</h3><p id="ce0a5028-1cc3-40b3-9600-1a6dfa206ee5" class="">corpo <strong>(</strong><code><strong>body</strong></code><strong>):</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="77dca50f-0bc5-4e70-b5cc-d23c27a8e4b9" class="code"><code class="language-CSS">body {
+   background: linear-gradient(to bottom, #3498db, #2980b9);</code></pre><ul id="d62f8be8-bbdc-4f24-99a1-4205877a2749" class="bulleted-list"><li style="list-style-type:disc">Define um fundo gradiente azul escuro para azul claro na página.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="774a066c-119e-486a-a8b2-bba33d2e3bd9" class="code"><code class="language-CSS">color: #333;</code></pre><ul id="682c7517-5471-4cbe-b2fe-832889ea0c61" class="bulleted-list"><li style="list-style-type:disc">Define a cor do texto principal como um tom de cinza escuro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="dadeadcf-24c5-42d6-8b82-4476e9b72be7" class="code"><code class="language-CSS">font-family: &#x27;Arial&#x27;, sans-serif;</code></pre><ul id="b3abe66e-3fe4-4764-8d68-30bee12e4a35" class="bulleted-list"><li style="list-style-type:disc">Especifica a fonte do texto como Arial ou, se indisponível, qualquer fonte sans-serif padrão.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6ad5b0c6-ebd4-4934-be07-ce5857fd36a7" class="code"><code class="language-CSS">margin: 0;
+padding: 0;</code></pre><ul id="52c0dc1a-186d-4ba7-a166-5ecd6ad207aa" class="bulleted-list"><li style="list-style-type:disc">Remove as margens e o preenchimento padrão para evitar espaçamentos indesejados.</li></ul><h3 id="877070fb-a4e9-47b7-b8d8-64f9f7732ba5" class=""><strong>Estilo do Logotipo</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ad495d31-1e02-41b9-bf65-fb015c3c6e2d" class="code"><code class="language-CSS">.logo-container {
+    text-align: center;</code></pre><ul id="855395af-4a91-430e-a144-33cdc745b3b2" class="bulleted-list"><li style="list-style-type:disc">Centraliza o texto (no caso, o logotipo) no centro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="edb24f8c-5087-43e1-8cab-bc1e448291f5" class="code"><code class="language-CSS">margin: 20px 0; /* Margem superior e inferior de 20 pixels */
+}</code></pre><ul id="fc62adc0-5ba9-4c3e-a377-e140f7adc19d" class="bulleted-list"><li style="list-style-type:disc">Define margens superior e inferior de 20 pixels para o contêiner do logotipo.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="83814f2f-f7cb-463a-b74f-73085e4a48a4" class="code"><code class="language-CSS">.logo {
+    max-width: 100%; /* Garante que a logo nÃ£o ultrapasse o contÃªiner */
+    height: auto; /* Altura automÃ¡tica para manter a proporÃ§Ã£o original */
+}</code></pre><ul id="e6b0d0f0-8612-4fae-a5e4-c7f56a6dbad4" class="bulleted-list"><li style="list-style-type:disc">Garante que a logo não ultrapasse o contêiner, ajustando automaticamente a altura para manter a proporção original.</li></ul><h3 id="73c17210-5973-4196-83a9-0bd864922976" class="">Estilo do Formulário:</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="67f2e4f7-975b-4e9c-ab80-54075eb329f2" class="code"><code class="language-CSS">form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Preenchimento interno do formulÃ¡rio */
+    border-radius: 8px; /* Borda arredondada com raio de 8 pixels */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulÃ¡rio */
+    width: 300px; /* Largura do formulÃ¡rio */
+    margin: 0 auto; /* Centraliza o formulÃ¡rio na pÃ¡gina */
+}</code></pre><ul id="b24fc58c-53e2-4c34-ad30-6f6b894ca8b1" class="bulleted-list"><li style="list-style-type:disc">Define estilos para o formulário, como cor de fundo com opacidade, preenchimento interno, borda arredondada, sombra e centralização na página.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2d58972a-919d-4a72-99a0-420613523381" class="code"><code class="language-CSS">form label {
+    display: block; /* xibe labels em uma nova linha */
+    margin-bottom: 8px; /* Margem inferior entre as labels */
+}</code></pre><p id="7a8931ea-893a-4285-ba04-5f516fac3337" class="">• Configura as labels para serem exibidas em uma nova linha e adiciona uma margem inferior.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="225a1894-24e3-4a48-bf79-de51291b29d2" class="code"><code class="language-CSS">form input {
+    width: 100%; /* Largura total do campo de entrada */
+    padding: 10px; /* Preenchimento interno do campo de entrada */
+    margin-bottom: 15px; /* Margem inferior entre os campos de entrada */
+    box-sizing: border-box; /* O tamanho total do elemento inclui a borda e o preenchimento, nÃ£o apenas o conteÃºdo */
+}</code></pre><ul id="6bdfb0a6-f576-4e84-92e5-246cfedd837b" class="bulleted-list"><li style="list-style-type:disc">Define estilos para os campos de entrada, como largura total, preenchimento interno, margem inferior e box-sizing para incluir borda e preenchimento no tamanho total do elemento.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="62f60128-b3de-45f6-aaff-09d47860128a" class="code"><code class="language-CSS">form input[type=&quot;submit&quot;] {
+background-color: #3498db; /* Cor de fundo para o botÃ£o de envio */
+color: #fff; /* Cor do texto do botÃ£o de envio */
+cursor: pointer; /* Mostra o cursor como um ponteiro ao passar por cima */
+}</code></pre><p id="77eb225a-861f-460e-9be4-2d0cd0f08cdc" class="">• Estiliza o botão de envio do formulário, definindo cor de fundo, cor do texto e cursor.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8656568d-3e93-4565-90b5-2ba7a6d7cddb" class="code"><code class="language-CSS">form input[type=&quot;submit&quot;]:hover {
+    background-color: #2980b9; /* Cor de fundo mais escura ao passar o mouse por cima do botÃ£o de envio */
+}</code></pre><p id="55516a89-8da7-43fe-a89f-24fbd56c1486" class="">• Modifica a cor de fundo do botão de envio ao passar o mouse por cima.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a937f7c7-f558-4b0a-b65a-68bfabaf10fa" class="code"><code class="language-CSS">button {
+    background-color: #ddd; /* Cor de fundo para o botÃ£o VOLTAR */
+    padding: 10px; /* Preenchimento interno do botÃ£o VOLTAR */
+    border: none; /* Remove a borda padrÃ£o do botÃ£o */
+    cursor: pointer; /* Mostra o cursor como um ponteiro ao passar por cima */
+}</code></pre><ul id="aae59747-f978-45aa-9386-a992edc0025d" class="bulleted-list"><li style="list-style-type:disc">Define estilos para o botão &quot;VOLTAR&quot;, como cor de fundo, preenchimento interno, remoção da borda padrão e cursor.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="42559162-0929-445c-b5c7-fc03b930c3e3" class="code"><code class="language-CSS">button:hover {
+    background-color: #ccc; /* Cor de fundo mais escura ao passar o mouse por cima do botÃ£o VOLTAR */
+}</code></pre><ul id="7e933ade-e5fb-4e8e-afcf-0a3693fef1e3" class="bulleted-list"><li style="list-style-type:disc">Muda a cor de fundo do botão &quot;VOLTAR&quot; para um tom mais escuro ao passar o mouse por cima.</li></ul></details></li></ul><ul id="71bde5f0-5699-4082-a406-becb36e3e864" class="toggle"><li><details open=""><summary>style.css</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d15707ed-8773-4918-9cea-ddde8ca7db06" class="code"><code class="language-CSS">body {
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            color: #333;
+            font-family: &#x27;Arial&#x27;, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }</code></pre><p id="d4a4ba75-65fa-49fd-b85a-c2652dbf1743" class="">• Define o estilo geral do corpo da página, incluindo um gradiente de fundo, cor de texto, fonte, configuração de layout flexível (coluna), centralização vertical e horizontal (usando <code>align-items</code> e <code>justify-content</code>), e altura de 100% da viewport (<code>100vh</code>).</p><h3 id="8e477ca4-25ad-428f-9117-0afffdb209fc" class="">Estilo do logotipo</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="acc95350-6b9f-4ff9-b1cd-0b62cac1a61f" class="code"><code class="language-CSS">.logo-container {
+            margin-bottom: 20px;
+        }</code></pre><p id="83b1e5fc-cdb6-45ee-b61f-31358719e726" class="">• Adiciona uma margem inferior ao contêiner da logo para dar espaço entre a logo e o formulário.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="933f2af8-8e6a-47db-b2a7-466821081f8f" class="code"><code class="language-CSS">.logo {
+            max-width: 100%;
+            height: auto;
+        }</code></pre><ul id="b3723187-7dee-48ba-a857-bf003c0e8fc3" class="bulleted-list"><li style="list-style-type:disc">Garante que a logo não ultrapasse o contêiner, ajustando automaticamente a altura para manter a proporção original.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3214634a-5a92-4371-b9e3-1f71498507dd" class="code"><code class="language-CSS">form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }</code></pre><ul id="72640bdc-cf35-41cd-a4ed-8cf99b4acf5a" class="bulleted-list"><li style="list-style-type:disc">Define estilos para o formulário, como cor de fundo com opacidade, preenchimento interno, borda arredondada, sombra e largura fixa e centralização do texto.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3a14aa76-02f0-4145-8b8a-2bf141e491c7" class="code"><code class="language-CSS">form p {
+            margin-bottom: 20px;
+        }</code></pre><ul id="0daaf0f5-5728-4554-93f6-c8c3c0375133" class="bulleted-list"><li style="list-style-type:disc">Adiciona uma margem inferior para dar espaçamento entre os parágrafos dentro do formulário.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="41fbff08-5304-44c5-8f99-97a3e6eb77a4" class="code"><code class="language-CSS">form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }</code></pre><ul id="be13a053-3642-4b88-9866-199e7ade3a6c" class="bulleted-list"><li style="list-style-type:disc">Define estilos para os campos de entrada, como largura total, preenchimento interno, margem inferior e configuração de box-sizing para incluir borda e preenchimento no tamanho total do elemento</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="daf08cd8-6ec9-4244-8c7f-f4f8ea2131b1" class="code"><code class="language-CSS">form input[type=&quot;submit&quot;] {
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }</code></pre><ul id="61f20a99-8d9a-41fc-8f65-78ce084e6bbf" class="bulleted-list"><li style="list-style-type:disc">Define o estilo do botão de envio com uma cor de fundo azul, texto branco e cursor de ponteiro.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e96ebd84-a90a-425a-acc8-105b1fde4dff" class="code"><code class="language-CSS">form input[type=&quot;submit&quot;]:hover {
+            background-color: #2980b9;
+        }</code></pre><ul id="a2f3e29e-2e0c-4348-8e9a-9029c86ccceb" class="bulleted-list"><li style="list-style-type:disc">Muda a cor de fundo do botão para um tom mais escuro ao passar o mouse por cima.</li></ul><h3 id="0a6b684a-2d86-409e-beaf-3aef8527550f" class="">Estilo na mensagem de erro</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="296b905a-6d03-4f2c-aad9-3a91f4eda00a" class="code"><code class="language-CSS">.error-message {
+            color: #e74c3c;
+            margin-top: 10px;
+        }</code></pre><p id="ce4597db-2747-45f3-a087-e8db3b823656" class="">• Define estilos para a mensagem de erro, como cor vermelha e uma margem superior para separação.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="40584482-b505-4fe0-8f2b-c93663a5e5f4" class="code"><code class="language-CSS">.radio-group {
+            display: flex;
+        }
+
+        .radio-group input {
+            margin-right: 0.5px; /* Adicione margem entre os botões de rádio, se necessário */
+        
+
+        .radio-group label {
+            margin-right: 1px; /* Adicione margem entre os rótulos, se necessário */
+        }</code></pre><ul id="4b0bbcde-db69-40b4-bc29-db689f39dac6" class="bulleted-list"><li style="list-style-type:disc">Esse trecho adiciona estilos para um grupo de botões de rádio, utilizando o layout flexível (<code>display: flex</code>). Ele também inclui margens entre os botões de rádio e rótulos para melhor espaçamento visual</li></ul><p id="2cede058-932f-4eda-946a-23a7127a03b5" class="">
+</p></details></li></ul><ul id="4e8274d0-7f27-4dea-9fd7-e76239eb893c" class="toggle"><li><details open=""><summary>rel.style.css</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f6f88485-46f3-4cc9-9417-86e35c945fb4" class="code"><code class="language-CSS">body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}</code></pre><ul id="cb39dbbf-b2e4-4ecf-ae2d-ffc4b28eda5b" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Definir estilos gerais para o corpo da página.</li></ul><ul id="1a224992-07f7-441f-b92d-9a64f64b5f2d" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="bf68a052-b01c-434f-b747-08c5c6150fe3" class="bulleted-list"><li style="list-style-type:circle"><code>font-family</code>: Define a família de fontes utilizada na página como Arial ou fontes sans-serif.</li></ul><ul id="79b7a3f0-6ea4-492b-a0cf-48baa50f0a58" class="bulleted-list"><li style="list-style-type:circle"><code>background-color</code>: Estabelece a cor de fundo como um tom de cinza claro (#f4f4f4).</li></ul><ul id="2f5e5db9-8489-441f-98f6-1a9b2cf08116" class="bulleted-list"><li style="list-style-type:circle"><code>margin</code>, <code>padding</code>: Remove margens e preenchimentos padrão do corpo.</li></ul><ul id="4d68f6a0-12f3-4701-95ab-7f4b00285450" class="bulleted-list"><li style="list-style-type:circle"><code>display</code>: Utiliza o modelo flex para centralizar conteúdo na vertical e horizontal.</li></ul><ul id="708db0a8-4921-45cc-993b-0edd4b763797" class="bulleted-list"><li style="list-style-type:circle"><code>height</code>: Define a altura do corpo como 40% da altura da visualização da janela (viewport height).</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="42aa585d-29d1-4d2b-928b-1c5da2d5aa68" class="code"><code class="language-CSS">.container {
+    text-align: center;
+}</code></pre><ul id="5f25ddc7-199a-4501-855d-74412f46f3b8" class="bulleted-list"><li style="list-style-type:circle"><strong>Objetivo:</strong> Ajustar o estilo do container principal.</li></ul><ul id="5e439bd8-fe35-430d-a7db-ece3e160cc30" class="bulleted-list"><li style="list-style-type:circle"><strong>Explicação:</strong><ul id="1ae9b1a3-7e17-4210-9c5f-2578c2476d45" class="bulleted-list"><li style="list-style-type:square"><code>text-align</code>: Centraliza o texto no container.</li></ul></li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="79db51fe-308f-4d6f-ba00-20c58f34997a" class="code"><code class="language-CSS">h1 {
+    color: #333;
+}</code></pre><ul id="3461d30f-be29-478b-a0a9-53dcb84419bb" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estilizar o título principal.</li></ul><ul id="db9b4d83-b4df-4869-b443-149e5b887480" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="cfbd38ed-cd34-4dc7-90b9-4f9128ae8d90" class="bulleted-list"><li style="list-style-type:circle"><code>color</code>: Define a cor do texto do título como um tom escuro de cinza (#333).</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="58444e95-dbbf-45e2-8d3d-04d3ffe66819" class="code"><code class="language-CSS">table {
+    width: 100%; /* Ajuste a largura conforme necessário */
+    border-collapse: collapse;
+    margin-top: 20px;
+}</code></pre><ul id="70a1e153-e90d-4bb3-ad9c-ab4a4eb5116a" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estabelecer estilos para a tabela.</li></ul><ul id="59d433f7-e75a-4bf9-bb5e-a9297866497d" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="ce414039-117a-4d94-93ed-51de842ad374" class="bulleted-list"><li style="list-style-type:circle"><code>width</code>: Define a largura da tabela como 100% da largura disponível.</li></ul><ul id="3205c369-72fd-4754-802e-ece83ee3626c" class="bulleted-list"><li style="list-style-type:circle"><code>border-collapse</code>: Remove espaçamento entre as bordas das células.</li></ul><ul id="66fe6c3b-8c3e-4248-89c7-bb19a7ea033d" class="bulleted-list"><li style="list-style-type:circle"><code>margin-top</code>: Adiciona um espaçamento superior de 20 pixels.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fb70aedf-f3d5-4aa9-ab70-de5d46fe3434" class="code"><code class="language-CSS">table, th, td {
+    border: 1px solid #ddd;
+}</code></pre><ul id="0f23de75-5a7f-4305-85ca-c7e5c3eaa982" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Adicionar bordas às células da tabela.</li></ul><ul id="76158656-b7f8-4cbc-a41d-d652e3ca7430" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="f62e3ed9-8ae9-4a52-93af-f9c750b6b28a" class="bulleted-list"><li style="list-style-type:circle"><code>border</code>: Adiciona uma borda de 1 pixel com uma cor cinza clara (#ddd).</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8fed070c-84ff-4f04-8d33-bcafd8c7b43e" class="code"><code class="language-CSS">th {
+    background-color: #4CAF50;
+    color: white;
+}</code></pre><ul id="751d608c-4ea3-44e4-86d5-1951156e4eb4" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estilizar as células do cabeçalho da tabela.</li></ul><ul id="9f8d51af-61a2-4eec-b602-b2483e7d71a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="a1315b9c-6c0a-4813-b734-34057c734fda" class="bulleted-list"><li style="list-style-type:circle"><code>background-color</code>: Define a cor de fundo como verde (#4CAF50).</li></ul><ul id="54be7a8d-9606-46e1-95c5-6e315f560152" class="bulleted-list"><li style="list-style-type:circle"><code>color</code>: Define a cor do texto como branco.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ef9eeb83-c214-4b8a-83d6-9712237912d2" class="code"><code class="language-CSS">tr:hover {
+    background-color: #f5f5f5;
+}</code></pre><ul id="cefcc7e7-e2b7-418f-9a6e-c965be454e2f" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Adicionar um destaque quando o mouse passa sobre uma linha da tabela.</li></ul><ul id="f522d6e5-475b-4139-98f1-b91efac70f9b" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="ce90681a-ce70-437e-a713-76761e689ad4" class="bulleted-list"><li style="list-style-type:circle"><code>background-color</code>: Muda a cor de fundo para um tom mais claro (#f5f5f5) ao passar o mouse sobre uma linha.</li></ul><p id="ab504a18-7d54-4c04-8c91-908499e4a2ce" class="">
+</p></li></ul></details></li></ul><ul id="cb3af470-9c21-4cbc-a4fa-7ad3feaf501c" class="toggle"><li><details open=""><summary>relatorio.php</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c96b63e1-2914-4924-86ee-ec74f5e840e3" class="code"><code class="language-PHP">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Página de Relatórios&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;rel.style.css&quot;&gt;
+&lt;/head&gt;</code></pre><ul id="9160ccbc-2cde-44a2-b9ff-ef598ff75114" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Definir a estrutura inicial do documento HTML.</li></ul><ul id="ba3d7fcb-3a75-4291-8177-1c09b1d2c6e5" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="9d7837a3-fa8e-4ce5-a93d-cc41d201c3ee" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;!DOCTYPE html&gt;</code>: Declaração do tipo de documento.</li></ul><ul id="9b93ed8d-9850-4865-8eaa-660edfc75819" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;html lang=&quot;pt-br&quot;&gt;</code>: Elemento raiz do HTML com atributo de idioma.</li></ul><ul id="e0c02816-b28c-43a1-81e3-0abf1e9e26d4" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;head&gt;</code>: Contém informações sobre o documento, como o título e os estilos.</li></ul><ul id="f8723d3d-2532-4873-9cdc-b60ffd35b064" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code>: Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais.</li></ul><ul id="fe5cccd0-09b3-49ee-b15c-7ef5b9dcd945" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code>: Configura a visualização responsiva em dispositivos móveis.</li></ul><ul id="7a22e45f-3631-4229-9d1c-01eb39c98891" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;title&gt;</code>: Título da página exibido na barra de título do navegador.</li></ul><ul id="bde1f060-b3d4-4252-9803-b3c5e9d846e4" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;rel.style.css&quot;&gt;</code>: Vínculo ao arquivo de estilo CSS.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="dd5ef098-eef1-4b33-9d9b-17222017b81d" class="code"><code class="language-PHP">&lt;body&gt;
+
+
+
+    &lt;div class=&quot;container&quot;&gt;
+
+         &lt;h1&gt;RELATÓRIO DE ACESSOS&lt;/h1&gt;</code></pre><ul id="c35837fa-e38c-4181-807c-fb8e16267aaa" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Estruturar o conteúdo principal da página.</li></ul><ul id="0583dfdd-f67e-4ebc-881d-c74f145ba6fe" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="24bd6959-b032-47c9-8293-b99491343925" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;body&gt;</code>: Contém todo o conteúdo visível da página.</li></ul><ul id="10fa8881-5461-46e6-b83c-f38b036449e7" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;div class=&quot;container&quot;&gt;</code>: Container principal que agrupa o conteúdo.</li></ul><ul id="28fbaa1c-5072-4460-852c-e3154dac1d6f" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;h1&gt;</code>: Título principal da página.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c196dc96-4fb2-49da-843a-ffdd3d40f453" class="code"><code class="language-PHP">&lt;form method=&quot;post&quot; action=&quot;&quot; class=&quot;search-form&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;data&quot;&gt;Pesquisar por Data:&lt;/label&gt;
+        &lt;input type=&quot;date&quot; id=&quot;data&quot; name=&quot;data&quot;&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;cpf&quot;&gt;Pesquisar por CPF:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;cpf&quot; name=&quot;cpf&quot; placeholder=&quot;Digite o CPF&quot;&gt;
+    &lt;/div&gt;
+        
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;mac&quot;&gt;Pesquisar por MAC:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;mac&quot; name=&quot;mac&quot; placeholder=&quot;Digite o MAC&quot;&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;nome&quot;&gt;Pesquisar por Nome:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;nome&quot; name=&quot;nome&quot; placeholder=&quot;Digite o Nome&quot;&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Pesquisar&quot;&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre><ul id="6e404138-edf9-4a52-a3b9-0c1c06fe491c" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Incluir um formulário para permitir a filtragem dos resultados.</li></ul><ul id="48e9e767-c2a1-4feb-ad18-c872dfea4687" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="862ff280-3cc1-474d-b6d3-020471f781cc" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;form method=&quot;post&quot; action=&quot;&quot; class=&quot;search-form&quot;&gt;</code>: Formulário usando o método POST e sem ação definida (será a própria página).</li></ul><ul id="88f2feff-2b69-4655-ae36-6efb94cf6af3" class="bulleted-list"><li style="list-style-type:circle">Campos de filtro para data, CPF, MAC e Nome.</li></ul><ul id="681502fb-f0ff-42d8-905b-bb5486b83b6e" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;input type=&quot;submit&quot; value=&quot;Pesquisar&quot;&gt;</code>: Botão de envio para acionar a pesquisa.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="decc3502-7b7d-4cfc-ae0b-808984148545" class="code"><code class="language-PHP">&lt;?php
+        include &#x27;../conexao.php&#x27;;
+
+        // Processar os filtros
+        $filtro_data = isset($_POST[&#x27;data&#x27;]) ? $_POST[&#x27;data&#x27;] : &#x27;&#x27;;
+        $filtro_cpf = isset($_POST[&#x27;cpf&#x27;]) ? $_POST[&#x27;cpf&#x27;] : &#x27;&#x27;;
+        $filtro_mac = isset($_POST[&#x27;mac&#x27;]) ? $_POST[&#x27;mac&#x27;] : &#x27;&#x27;;
+        $filtro_nome = isset($_POST[&#x27;nome&#x27;]) ? $_POST[&#x27;nome&#x27;] : &#x27;&#x27;;
+
+        // Montar a consulta SQL com base nos filtros
+        $sql = &quot;SELECT nome, cpf, ip, mac, hora_login, hora_logout FROM usuarios_log WHERE 1&quot;;</code></pre><ul id="aba9face-201f-4c2e-b1bc-6f5237eabcaf" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Conectar ao banco de dados e processar os filtros para construir a consulta SQL.</li></ul><ul id="78ffd10e-c782-4cf5-9e8c-c15cc60e697c" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="247ab3d8-2002-407f-98ae-2f8391384483" class="bulleted-list"><li style="list-style-type:circle"><code>include &#x27;../conexao.php&#x27;;</code>: Inclui o arquivo de conexão ao banco de dados.</li></ul><ul id="caab2074-9d5f-4691-928c-435ba7e7c09a" class="bulleted-list"><li style="list-style-type:circle">Processa os filtros (data, CPF, MAC, Nome) vindos do formulário.</li></ul><ul id="eaf3d3e6-f961-456d-ac27-8caf68cdcea4" class="bulleted-list"><li style="list-style-type:circle">Constrói a consulta SQL considerando os filtros.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8bf68444-dc62-4aa5-a24a-2db53d6073be" class="code"><code class="language-PHP">// Montar a consulta SQL com base nos filtros
+        $sql = &quot;SELECT nome, cpf, ip, mac, hora_login, hora_logout FROM usuarios_log WHERE 1&quot;;
+
+        if (!empty($filtro_data)) {
+            $sql .= &quot; AND DATE(hora_login) = &#x27;$filtro_data&#x27;&quot;;
+        }
+
+        if (!empty($filtro_cpf)) {
+            $sql .= &quot; AND cpf LIKE &#x27;%$filtro_cpf%&#x27;&quot;;
+        }
+
+        
+        if (!empty($filtro_mac)) {
+            $sql .= &quot; AND mac LIKE &#x27;%$filtro_mac%&#x27;&quot;;
+        }
+
+        if (!empty($filtro_nome)) {
+            $sql .= &quot; AND nome LIKE &#x27;%$filtro_nome%&#x27;&quot;;
+        }
+
+        $result = $conn-&gt;query($sql);
+
+        if (!$result) {
+            die(&quot;Erro na consulta: &quot; . $conn-&gt;error);
+        }
+
+        if ($result-&gt;num_rows &gt; 0) {
+            // Exibir os resultados
+            echo &#x27;&lt;table&gt;&#x27;;
+            echo &#x27;&lt;tr&gt;
+                    &lt;th&gt;Nome&lt;/th&gt;
+                    &lt;th&gt;CPF&lt;/th&gt;
+                    &lt;th&gt;IP&lt;/th&gt;
+                    &lt;th&gt;MAC&lt;/th&gt;
+                    &lt;th&gt;Hora de Login&lt;/th&gt;
+                    &lt;th&gt;Hora de Logout&lt;/th&gt;
+                &lt;/tr&gt;&#x27;;
+
+            while ($row = $result-&gt;fetch_assoc()) {
+                echo &#x27;&lt;tr&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;nome&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;cpf&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;ip&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;mac&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;hora_login&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;td&gt;&#x27; . $row[&#x27;hora_logout&#x27;] . &#x27;&lt;/td&gt;&#x27;;
+                echo &#x27;&lt;/tr&gt;&#x27;;
+            }
+
+            echo &#x27;&lt;/table&gt;&#x27;;
+        } else {
+            echo &#x27;Nenhum registro encontrado com os filtros aplicados.&#x27;;
+        }
+        ?&gt;</code></pre><ul id="b77410fd-7973-49d5-914e-a85158a02308" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Exibir os resultados da consulta em uma tabela.</li></ul><ul id="c260ee10-08c9-405c-9848-d7175548e44c" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="2eb015e8-a0d3-4204-b77d-937499e0fee4" class="bulleted-list"><li style="list-style-type:circle">Verifica se há resultados na consulta.</li></ul><ul id="24278bd5-b4dc-4f68-87bd-4bbf5c0f302f" class="bulleted-list"><li style="list-style-type:circle">Se houver resultados, exibe-os em uma tabela HTML.</li></ul><ul id="88ed1250-c558-4ebb-939b-a6c2084c30a7" class="bulleted-list"><li style="list-style-type:circle">Caso contrário, informa que nenhum registro foi encontrado com os filtros aplicados.</li></ul></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bcd522ed-f8db-4c11-9b36-b40b7a70608a" class="code"><code class="language-PHP">&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><ul id="86b2fa20-3d95-4cc8-876d-df704be80e94" class="bulleted-list"><li style="list-style-type:disc"><strong>Objetivo:</strong> Finalizar o corpo do documento HTML.</li></ul><ul id="ff1838b8-b3a0-4dba-8510-39a44aa95d4d" class="bulleted-list"><li style="list-style-type:disc"><strong>Explicação:</strong><ul id="782ac620-3ff9-4654-90a5-d3d245591b99" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;div class=&quot;container&quot;&gt;</code>: Fecha o container principal.</li></ul><ul id="10fa457c-245e-4f2f-8102-af4f48b23da6" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;/body&gt;</code>: Fecha o corpo do documento HTML.</li></ul><ul id="badee0ae-8af0-4be2-a27d-cc6ea1a447b0" class="bulleted-list"><li style="list-style-type:circle"><code>&lt;/html&gt;</code>: Fecha o elemento raiz do HTML.</li></ul><p id="140c53c3-2e7e-4f72-95b1-c3b7db43b10f" class="">
+</p></li></ul></details></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
